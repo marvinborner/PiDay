@@ -12,11 +12,15 @@
 <div>Current index: <span id="currentIndex"></span></div>
 <div>Current value: <span id="currentValue"></span></div>
 
+<label for="index">Index:</label>
+<input id="index" type="number">
+<br>
 <label for="speed">Speed (lower means faster):</label>
-<input type="range" min="10" max="1000" value="200" step="50" id="speed" style="writing-mode: bt-lr">
+<input id="speed" max="1000" min="10" step="50" style="writing-mode: bt-lr" type="range"
+       value="200">
 <br>
 <label for="volume">Volume:</label>
-<input type="range" min="0" max="5" value="1" step="0.1" id="volume">
+<input id="volume" max="10" min="0" step="0.1" type="range" value="1">
 <br>
 <label for="frequency_base">Frequency base:</label>
 <input type="range" min="10" max="1000" value="440" step="20" id="frequency_base">
@@ -24,7 +28,18 @@
 <label for="rythmic">Rythmic:</label>
 <input type="checkbox" id="rythmic">
 <br>
-<button onclick="beepFunction(0)">Start</button>
+<label for="beat">Beat:</label>
+<input id="beat" type="checkbox">
+<br>
+<label for="waveform">Waveform</label>
+<select id="waveform">
+    <option value="square">Square</option>
+    <option value="sine">Sine</option>
+    <option value="sawtooth">Sawtooth</option>
+    <option value="triangle">Triangle</option>
+</select>
+<br><br>
+<button onclick="beepFunction(0)">Start/Stop</button>
 
 <script src="script.js"></script>
 </body>
